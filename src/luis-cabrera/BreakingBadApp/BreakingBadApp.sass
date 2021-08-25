@@ -1,0 +1,20 @@
+@import "~bulma/sass/utilities/_all"
+
+.breakingBadApp
+	min-height: 100vh
+
+.brand-logo
+	border-radius: $size-6
+	background-color: $light
+
+@media screen and (max-width: 768px)
+	.brand-logo
+		img
+			height: 10rem
+
+@media screen and (max-width: 360px)
+	.brand-logo
+		width: calc(100% - 2rem)
+		img
+			max-width: 100%
+			height: auto
