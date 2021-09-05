@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should be <App /> 1`] = `
+<Fragment>
+  <h1>
+    Hello World!
+  </h1>
+  <p>
+    My first application
+  </p>
+</Fragment>
+`;
+
+exports[`App should be <CounterApp /> 1`] = `
+<Fragment>
+  <h1>
+    CounterApp
+  </h1>
+  <p>
+    10
+  </p>
+  <div
+    className="controls"
+  >
+    <button
+      onClick={[Function]}
+    >
+      +1
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      -1
+    </button>
+  </div>
+</Fragment>
+`;

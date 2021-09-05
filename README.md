@@ -70,7 +70,7 @@ Crear proyecto en [React]:
 - Usar [Create React App] de manera global (Más rápido)
 
 ```bash
-npm install -g create-react-app
+npm install -g create-react-app             # CLI para React
 create-react-app nombre-carpeta-proyecto
 ```
 
@@ -103,6 +103,12 @@ npm i sass
 npm install bulma
 npm install --save styled-components
 npm install @material-ui/core
+npm install @material-ui/icons  # Para el uso de íconos
+```
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 ```
 
 Verificación de instalación de [Material UI]:
@@ -115,6 +121,11 @@ Instalación de utilidades en [Chrome]:
 
 - [React Developer Tools]
 - [Redux DevTools]
+
+Otras instalaciones:
+
+- [Postman]
+- [Mongo Compass]
 
 [Index]
 
@@ -139,21 +150,22 @@ react-project/
 |   |
 |   |— favicon.ico
 |   |— index.html           // HTML base del sitio
-|   |— logo192.png
-|   |— logo512.png
+|   |— logo192.png          // PWAs
+|   |— logo512.png          // PWAs
 |   |— manifest.json        // configuración básica de PWA
-|   |— robots.txt
+|   |— robots.txt           // buscadores de google
 |
 |— src/
     |
-    |— App.css              // estilos del componente principal
+    |— App.css              // estilos del componente App
     |— App.js               // componente principal
     |— App.test.js          // para hacer testeos
-    |— index.css
-    |— index.js             // cargar, importar lo principal de React (estilos, componentes, ...)
+    |— index.css            // estilos globales
+    |— index.js             // cargar, importar lo principal de React (estilos, componentes, ...). Punto inicial de la App
     |— logo.svg
     |— reportWebVitals.js
-    |— setupTests.js
+    |— serviceWorker.js     // PWAs
+    |— setupTests.js        // Primero en el testeo
 ```
 
 Estructura por defecto con [TypeScript]:
@@ -223,6 +235,23 @@ src/
 |— types.js         // Definiciones de variables
 ```
 
+- `index.html`:
+
+```html
+<!-- Variable del directorio de public/ -->
+%PUBLIC_URL%
+
+<!-- Task manager de Android - PWA -->
+<meta name="theme-color" content="#000000" />
+
+<!-- PWAas -->
+<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+<!-- Si JS no está habilitado -->
+<noscript>You need to enable JavaScript to run this app.</noscript>
+```
+
 [Index]
 
 ---
@@ -230,8 +259,20 @@ src/
 
 ## Definiciones
 
-- Componentes: son funciones.
+- Componentes: son funciones. Pequeña pieza de código encapsulada re-utilizable que puede tener **estado** o no.
+- **Estado**: cómo se muestra la información en un momento determinado del tiempo
 - Componentes de **Clase** y **Funcionales** (Recomendado, más fáciles y mejor comportamiento).
+- **Functional Componentes** (Antes SFC: *Stateless functional components*)
+- Las etiquetas jsx son realmente objetos.
+- `return` sólo puede devolver un objeto a la vez.
+- Al separar el return en una línea independiente, **babel** lo interpreta como una sentencia, colocándole su `;` al final.
+- `<Fragment></Fragment>` { Fragment } ó
+- Etiqueta vacía: `<></>`
+- { Expresiones JS que devuelven algún valor }
+- Valores que no imprime: Booleanos, undefined, Objetos no los acepta, Arrays los imprime uno a continuación de otro.
+- Para objetos: `JSON.stringfy(objeto, null, 4)` dentro de un `<pre>`
+- Properties: **props** es un objeto.
+- Synthetic events: `onClick={ function }`
 - Ciclo de vida de un componente:
 	1. Primer render o carga.
 	1. Cambio de estado. (Se desmonta)
@@ -268,10 +309,35 @@ src/
 ## Elementos
 
 ```jsx
-import React 	from 'react';		// Ya no es necesario en las últimas versiones de create-react-app
-import ReactDOM from 'react-dom';
+import React 	from 'react';		// Permite usar JSX. Ya no es necesario en las últimas versiones de create-react-app
+import ReactDOM from 'react-dom';   // Permite insertar los elementos en el DOM
 
 ReactDOM.render(Component, Selector);
+```
+
+Especificar el tipo y las props requeridas
+
+```js
+import Proptypes from 'prop-types';
+
+const MyComponent = () => {}
+
+MyComponent.propTypes = {
+  propName: Proptypes.string.isRequired,
+}
+```
+
+Valores por defecto
+
+```js
+// Nativa de JS
+// Si no se pasa algún valor, React no lo reconoce como una prop
+({ prop = 'Value' })
+
+// Siempre se la reconoce como una prop
+MyComponent.defaultProps = {
+  prop: '',
+}
 ```
 
 ### useState
@@ -282,6 +348,11 @@ ReactDOM.render(Component, Selector);
 
 ```jsx
 setState(prevState => { /* Operaciones con prevState */ });
+```
+
+```js
+setCounter(counter + 1);   // ó
+setCounter((c) => c + 1);
 ```
 
 ### useEffect
@@ -477,10 +548,21 @@ const textStyle = {
 - `imr`
 - `rafce`
 - `useState`
+- `console.warn`
+- `console.error`
 
 ### Códigos JS
 
 ```jsx
+// Funciones sin un `return` definido, devuelve `undefined`
+// Para evitar sobrescribir la definición de una función:
+const functionName = function( name ) {
+    return `Hello ${ name }!`;
+}
+
+// Arrow functions: se pueden simplificar:
+const functionName = name => `Hello ${ name }!`;
+
 // uso de OR, si el primer elemento es falso o no existe, se usará el segundo
 const [todos, setTodos] = useState(localTodos || initialTodos);
 const literal = `${todo.completed || 'is-light'}`;
@@ -515,6 +597,7 @@ document.exexCommand('copy');
 // ARRAY:           Necesario marcar la posición del valor con ','  - No es necesario alias.
 //                                                                  - Cuando se use más de dos veces el mismo hook y se desee con diferentes alias.
 // SINGLE VARIABLE:	Cuando se retorna un solo valor
+const { name: newName, age, features: { habilities, clothes } } = objectName;
 
 // Los componentes son objetos en sí, y sus atributos son propiedades de ellos
 const myComp = (props) => {
@@ -538,7 +621,10 @@ const types = {
 // resto de propiedades: ...rest
 const PrivateRouter = ({ component: Component, ...rest }) => { /* code... */ }
 
-// .filter .map .find .includes
+// .filter
+// .map
+// .find
+// .includes
 // Potencias: `2 ** 3` equivalente a *2 al cubo*.
 ```
 
@@ -605,12 +691,14 @@ TODO: React con clases
 [Sass]: 			        https://sass-lang.com/
 [Bulma]: 			        https://bulma.io/
 [Styled Components]:      	https://styled-components.com/
-[Material UI]:      		https://material-ui.com/es/
+[Material UI]:      		https://material-ui.com/
 [TypeScript]:				https://www.typescriptlang.org/
 
 [Chrome]:                   https://www.google.com/intl/es-419/chrome/
 [React Developer Tools]:    https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es
 [Redux DevTools]:           https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es
+[Postman]:                  https://www.postman.com/
+[Mongo Compass]:            https://www.mongodb.com/try/download/compass
 
 [Youtube]:					https://www.youtube.com/
 [Luis Cabrera]:				https://www.youtube.com/playlist?list=PLdcAPGja1uw1fmhVo-obnAXEXPqYQ9HLy

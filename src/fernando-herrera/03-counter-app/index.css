@@ -1,0 +1,34 @@
+html, body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #21232A;
+	color: white;
+	font-size: 2rem;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+  	margin: 0.5rem;
+}
+
+button {
+	padding: 0.25rem;
+	margin-right: 0.25rem;
+	font-size: 1.25rem;
+	cursor: pointer;
+}
+
+button:last-child {
+ 	margin-right: 0;
+}
+
+.controls {
+  	flex-direction: row;
+}

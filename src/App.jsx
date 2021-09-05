@@ -5,7 +5,7 @@
 // import GlobalStateApp from './luis-cabrera/GlobalStateApp';
 // import MemorizeApp from './luis-cabrera/MemorizeApp';
 // import ModalApp from './luis-cabrera/ModalApp';
-import RouterApp from "./luis-cabrera/RouterApp";
+// import RouterApp from "./luis-cabrera/RouterApp";
 // import TodoApp from './luis-cabrera/TodoApp';
 // import UseEffectApp from './luis-cabrera/UseEffectApp';
 // import UseReducerApp from './luis-cabrera/UseReducerApp';
@@ -30,7 +30,7 @@ function App()
 			{/* <ContextApp /> */}
 			{/* <UseReducerApp /> */}
 			{/* <GlobalStateApp /> */}
-			<RouterApp />
+			{/* <RouterApp /> */}
 		</div>
 	);
 }
