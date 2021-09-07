@@ -19,6 +19,12 @@ Este repositorio contiene diferentes prácticas relacionadas con [React]: códig
 
 Los ejercicios están ordenados del más actual al más antiguo.
 
+### Prácticas #2
+
+Ejercicios hechos en el curso de [Fernando Herrera] en la plataforma [Udemy].
+
+- [Gif Expert App](https://gifexpert-react-lazodev.netlify.app/)
+
 ### Prácticas #1
 
 Ejercicios hechos en el curso de [Luis Cabrera] en la plataforma [Youtube].
@@ -126,6 +132,11 @@ Otras instalaciones:
 
 - [Postman]
 - [Mongo Compass]
+- <https://animate.style/>
+- <https://www.npmjs.com/package/http-server>
+- <https://docs.github.com/en/enterprise/2.13/user/articles/setting-your-username-in-git>
+- Renombrar build como `docs` para crear un github page.
+- Si surgen errores, cambiar la direccion de los recursos en `index.html` en `docs` (Ayudarse de `Format document`)
 
 [Index]
 
@@ -234,6 +245,11 @@ src/
 |
 |— types.js         // Definiciones de variables
 ```
+
+- [Estructura de archivos](https://es.reactjs.org/docs/faq-structure.html) de React.
+- [Structuring projects and naming components in React](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76) de Hackernoon.
+
+---
 
 - `index.html`:
 
@@ -542,6 +558,7 @@ const textStyle = {
 - Etiquetas **JSX** entre paréntesis en **return** o **variables**.
 - FIXME: Separar componentes **lógicos** e **interfaz**.
 - Trabajar primero la interfaz (esquemáticamente al menos) para luego trabajar la lógica.
+- No usar el index como key en arreglos ya que es muy volátil.
 
 ### Snippets
 
@@ -700,7 +717,9 @@ TODO: React con clases
 [Postman]:                  https://www.postman.com/
 [Mongo Compass]:            https://www.mongodb.com/try/download/compass
 
+[Udemy]:                    https://www.udemy.com/
 [Youtube]:					https://www.youtube.com/
 [Luis Cabrera]:				https://www.youtube.com/playlist?list=PLdcAPGja1uw1fmhVo-obnAXEXPqYQ9HLy
+[Fernando Herrera]:         https://www.udemy.com/course/react-cero-experto/
 
 [Index]: 					#header

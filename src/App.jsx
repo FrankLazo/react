@@ -12,7 +12,7 @@
 // import UseRefApp from './luis-cabrera/UseRefApp';
 // import UseStateApp from './luis-cabrera/UseStateApp';
 
-
+import GifExpertApp from './fernando-herrera/04-gif-expert-app/GifExpertApp';
 
 function App()
 {
@@ -31,6 +31,8 @@ function App()
 			{/* <UseReducerApp /> */}
 			{/* <GlobalStateApp /> */}
 			{/* <RouterApp /> */}
+
+			<GifExpertApp />
 		</div>
 	);
 }
