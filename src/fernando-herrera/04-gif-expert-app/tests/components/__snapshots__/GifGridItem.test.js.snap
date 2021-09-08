@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gif Grid Item should show right component <GifGridItem /> 1`] = `
+<div
+  className="card mb-4 mr-4 animate__animated animate__fadeIn"
+>
+  <div
+    className="card-image"
+  >
+    <figure
+      className="image m-0"
+    >
+      <img
+        alt="Image title"
+        src="https://localhost/something.jpg"
+      />
+    </figure>
+  </div>
+  <div
+    className="card-content"
+  >
+    <div
+      className="content"
+    >
+      <p>
+        Image title
+      </p>
+    </div>
+  </div>
+</div>
+`;

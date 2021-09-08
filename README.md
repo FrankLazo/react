@@ -567,6 +567,7 @@ const textStyle = {
 - `useState`
 - `console.warn`
 - `console.error`
+- `impt`
 
 ### Códigos JS
 

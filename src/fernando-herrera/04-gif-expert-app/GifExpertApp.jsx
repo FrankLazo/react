@@ -4,9 +4,10 @@ import GifGrid from './components/GifGrid';
 import './GifExpertApp.sass';
 import 'animate.css';
 
-const GifExpertApp = () =>
+const GifExpertApp = ({ defaultCategories=[] }) =>
 {
-	const [categories, setCategories] = useState(['Megadeth']);
+	const [categories, setCategories] = useState(defaultCategories);
+	// const [categories, setCategories] = useState(['Megadeth']);
 
 	return (
 		<div className="gifexpertapp content has-background-dark is-flex is-flex-direction-column is-align-items-start p-6 animate__animated animate__fadeIn">

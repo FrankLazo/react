@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on CategoryAdd should show the right component 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="field"
+  >
+    <div
+      className="control"
+    >
+      <input
+        className="input"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</form>
+`;

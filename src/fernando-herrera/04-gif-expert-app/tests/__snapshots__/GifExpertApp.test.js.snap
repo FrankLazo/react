@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on <GifExpertApp /> should show a categories list 1`] = `
+<div
+  className="gifexpertapp content has-background-dark is-flex is-flex-direction-column is-align-items-start p-6 animate__animated animate__fadeIn"
+>
+  <h1
+    className="has-text-primary"
+  >
+    Gif expert app
+  </h1>
+  <CategoryAdd
+    setCategories={[Function]}
+  />
+  <hr
+    className="full-rule has-background-grey-dark"
+  />
+  <GifGrid
+    category="Megadeth"
+    key="Megadeth"
+  />
+  <GifGrid
+    category="Metallica"
+    key="Metallica"
+  />
+</div>
+`;
+
+exports[`Tests on <GifExpertApp /> should show the right component 1`] = `
+<div
+  className="gifexpertapp content has-background-dark is-flex is-flex-direction-column is-align-items-start p-6 animate__animated animate__fadeIn"
+>
+  <h1
+    className="has-text-primary"
+  >
+    Gif expert app
+  </h1>
+  <CategoryAdd
+    setCategories={[Function]}
+  />
+  <hr
+    className="full-rule has-background-grey-dark"
+  />
+</div>
+`;

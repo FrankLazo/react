@@ -193,6 +193,76 @@ beforeEach(() => {
 });
 ```
 
+```js
+// Para ver los atributos de un elemento
+wrapper.find('elem').props().atributte();
+// ó
+wrapper.find('elem').prop('atributte');
+
+// Si posee una clase
+const className = div.prop('className');
+expect(className.includes('animate__fadeIn')).toBe(true);
+// ó
+expect(div.hasClass('animate__fadeIn')).toBe(true);
+
+// Simular cambios en input
+// El segundo argumento es el valor del evento 'e'
+const value = 'Hello world!';
+input.simulate('change', { target: { value: value } });
+```
+
+```js
+// Función por defecto de jest
+const setCategories = jest.fn();
+
+// Si la función fue llamada al menos una vez
+expect(setCategories).toHaveBeenCalled();
+// Si la función fue llamada un número de veces
+expect(setCategories).toHaveBeenCalledTimes(number);
+// Si la función no fue llamada
+expect(setCategories).not.toHaveBeenCalled();
+// Si la función fue llamada con argumentos
+// Por ejemplo tipo función
+expect(setCategories).toHaveBeenCalledWidth( expect.any(Function) );
+
+// Simular submit
+.simulate('submit');
+
+// Limpiar todas las simulaciones
+jest.clearAllMocks();
+```
+
+```js
+// Fingir cualquier llamado al archivo y controlar lo que devuelve
+import useFetchGifs from '../../hooks/useFetchGifs';
+jest.mock('../../hooks/useFetchGifs');
+
+// Simular el valor devuelto
+useFetchGifs.mockReturnValue(value)
+```
+
+```js
+// Existencia de un elemento
+expect( wrapper.find('p').exists() ).toBe(false);
+
+// Tomar un componente
+wrapper.find('GifGridItem')
+```
+- <https://react-hooks-testing-library.com/>
+
+```js
+// Para custom hooks:
+import { renderHook } from '@testing-library/react-hooks';
+
+const { result } = renderHook(() => useFetchGifs('Megadeth'));
+const { data, loading } = result.current;
+
+// Esperar por el siguiente cambio en el componente
+// Pueden surgir problemas al desmontarse antes de tiempo el componente
+const { result, waitForNextUpdate } = renderHook(() => useFetchGifs('Megadeth'));
+await waitForNextUpdate();
+```
+
 ### Good practices
 
 1. Ending codeline with semi-colon `;`

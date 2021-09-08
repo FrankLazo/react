@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on GifGrid should show items when load images with useFetchGifs 1`] = `
+<div
+  className="has-text-light"
+>
+  <h2
+    className="has-text-light animate__animated animate__fadeIn"
+  >
+    Megadeth
+  </h2>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="abc"
+      key="abc"
+      title="Anything"
+      url="https://localhost/anything.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`Tests on GifGrid should show the right component and match with the snapshot 1`] = `
+<div
+  className="has-text-light"
+>
+  <h2
+    className="has-text-light animate__animated animate__fadeIn"
+  >
+    Megadeth
+  </h2>
+  <p
+    className="animate__animated animate__fadeIn"
+  >
+    Loading...
+  </p>
+  <div
+    className="card-grid"
+  />
+</div>
+`;
