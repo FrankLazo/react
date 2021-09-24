@@ -356,6 +356,8 @@ MyComponent.defaultProps = {
 }
 ```
 
+- No se pueden usar hooks dentro de condicionales.
+
 ### useState
 
 - Recibe un estado inicial y devuelve un array con el estado en sí mismo y una función para actualizar el estado.
@@ -382,13 +384,20 @@ setCounter((c) => c + 1);
 - Las funciones se vuelven a escribir en cada render, entonces si va como dependencia, en cada render se volverá a ejecutar el `effect` (Ocacionando problemas de rendimiento).
 - `return` se ejecuta al desmontar el componente (**Cleanup**).
 - Remover los **listeners** al desmontar los componentes para evitar sobrecargar la memoria con muchos listeners almacenados y asociados a componentes inexistentes.
+- Se ejecutan en orden a como están en el código.
+
+### useLayoutEffect
+<https://es.reactjs.org/docs/hooks-reference.html#uselayouteffect>
+
+- Ejecutar acciones después de terminados los renderizados.
+- Pero antes de la visualización, en cambio useEffect después de la visualización.
 
 ### useRef
 
 - Permite interactuar con el DOM real directamente.
 - `Referencia mutable` variable cuyo valor será persistente a lo largo de los renders, cuando cambie de valor no causará renderización.
 - No usarlo para modificar valores relacionados a estados, ya que no pasan por el DOM de React.
-- Para hacer uso de funciones o eventos del DOM que no se pueden usar con React: `.focus()`, `.select()`, `.play()`, `.pause()`, etc.
+- Para hacer uso de funciones o eventos del DOM que no se pueden usar con React: `.focus()`, `.select()`, `.play()`, `.pause()`, etc. (Aunque es más común usar JS directamente.)
 - Para usarlo como una variable contadora a lo largo de todos los renders.
 - Para verificar si un componente está montado o no, y evitar errores al conectarse a una API.
 
@@ -697,6 +706,8 @@ const StyledButton = styled(({warning, ...rest}) => (
     <StyledButton warning> My Button </StyledButton>
 </StylesProvider>
 ```
+
+- <https://breakingbadapi.com/>
 
 TODO: React con clases
 
