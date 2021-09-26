@@ -7,9 +7,14 @@
 // import MemoHook from './components/06-memos/MemoHook';
 // import Memorize from './components/06-memos/Memorize';
 // import MultipleCustomHooks from './components/03-examples/MultipleCustomHooks';
-import Parent from './components/07-memo-task/Parent';
+// import Parent from './components/07-memo-task/Parent';
 // import RealExampleRef from './components/04-useRef/RealExampleRef';
 // import SimpleForm from './components/02-useEffect/SimpleForm';
+
+// import './components/08-useReducer/intro-reducer';
+
+import MainApp from './components/09-useContext/MainApp';
+// import TodoApp from './components/08-useReducer/TodoApp';
 
 const HookApp = () =>
 {
@@ -25,7 +30,9 @@ const HookApp = () =>
 		// <Memorize />
 		// <MemoHook />
 		// <CallbackHook />
-		<Parent />
+		// <Parent />
+		// <TodoApp />
+		<MainApp />
 
 		// <div>
 		// 	HookApp

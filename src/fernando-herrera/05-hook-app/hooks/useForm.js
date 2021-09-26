@@ -12,9 +12,15 @@ const useForm = ( initialState = {} ) =>
 		});
 	};
 
+	const reset = () =>
+	{
+		setValues(initialState);
+	}
+
 	return {
 		values,
 		handleInputChange,
+		reset,
 	};
 };
 

@@ -98,6 +98,7 @@ yarn start	# más rápido
 Instalación de [React Router]:
 
 ```bash
+npm install react-router-dom    # or
 yarn add react-router-dom
 ```
 
@@ -316,6 +317,7 @@ src/
 - **Pure function**: opera utilizando sólo los parámetros de entrada sin recurrir o afectar a ningún otro elemento fuera de ellas.
 	1. Dado unos parámetros de entrada de idéntico valor, la función siempre devolverá el mismo resultado. (No número aleatorios)
 	1. El cómputo de la función, su lógica, no implica ningún efecto observable colateral fuera de ella. (No alterar DOM, no mutar variables externas, ni agregar eventos)
+- **HOC** High Order Component: Componente que devuelve otro componente.
 
 [Index]
 
@@ -449,6 +451,23 @@ counterRef.current++;
 
 ### useReducer
 
+- Reducer:
+    1. Es una función común y corriente
+    1. Debe de ser una función pura
+    1. Debe de retornar un nuevo estado
+    1. Usualmente sólo recibe dos argumentos:
+        - El valor inicial (initialState)
+        - La acción a ejecutar
+- Función pura:
+    1. No debe tener efectos secundarios. (Resolver todo internamente sin llamar a otras funciones)
+    1. No debe de realizar tareas asíncronas
+    1. Debe de retornar siempre un nuevo estado (No mutar el estado)
+    1. No debe de llamar localStorage o sessionStorage
+    1. No debe de requerir más que una acción que puede tener un argumento
+- Funcionamiento:
+
+![Funcionamiento de Reducer](assets/Reducer.jpg)
+
 - Reducer *puro*:
 	1. Retorna el mismo estado, si se dispara el mismo **action**, con el mismo **payload**.
 	1. Los parámetros de entrada (**state**, **action**) no deben ser mutados (alterados). Usar funciones que no modifiquen el valor original (**push**), sino que retornen uno nuevo (**filter**, **find**, **map**, **reduce**)
@@ -456,6 +475,9 @@ counterRef.current++;
 	1. Cuando se tiene una lógica compleja que involucra subvalores.
 	1. Cuando el próximo estado depende del anterior.
 	1. Cuando sobre un estado se realizan muchas acciones distintas para actualizarlo.
+- Tener controlado en un sólo lugar todas las acciones que modifican el estado de la aplicación.
+- useReducer y useState esencialmente sirven para lo mismo, useState para estados más simples.
+- <https://es.reactjs.org/docs/hooks-reference.html#usereducer>
 
 ```jsx
 // Mutador del estado inicial
@@ -493,6 +515,8 @@ const NameProvider = ({ children }) => {
         </NameContext.Provider>
     );
 }
+
+// NameContext es un HOC
 ```
 
 - `useContext` para los componentes:
