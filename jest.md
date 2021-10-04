@@ -159,6 +159,10 @@ expect(wrapper).toMatchSnapshot();
 
 Enzyme to JSON
 
+```bash
+npm install --save-dev enzyme-to-json
+```
+
 ```js
 import {createSerializer} from 'enzyme-to-json';
 
@@ -239,6 +243,8 @@ jest.mock('../../hooks/useFetchGifs');
 
 // Simular el valor devuelto
 useFetchGifs.mockReturnValue(value)
+
+// Importante el orden de obtener los elementos del componente y hacer las simulaciones.
 ```
 
 ```js
@@ -249,6 +255,13 @@ expect( wrapper.find('p').exists() ).toBe(false);
 wrapper.find('GifGridItem')
 ```
 - <https://react-hooks-testing-library.com/>
+
+```bash
+# if you're using npm
+npm install --save-dev @testing-library/react-hooks
+# if you're using yarn
+yarn add --dev @testing-library/react-hooks
+```
 
 ```js
 // Para custom hooks:
@@ -261,6 +274,65 @@ const { data, loading } = result.current;
 // Pueden surgir problemas al desmontarse antes de tiempo el componente
 const { result, waitForNextUpdate } = renderHook(() => useFetchGifs('Megadeth'));
 await waitForNextUpdate();
+```
+
+```js
+// Para funciones en custom hooks:
+expect(typeof result.current.functionName).toBe('function');
+
+// Ejecutar funciones de custom hooks;
+import { act } from '@testing-library/react-hooks';
+
+act(() => {
+    // Funciones...
+    // No se puede ejecutar la misma función más de dos veces
+    // Lo considera sólo una vez
+});
+
+// Para corregir el problema del timeout
+await waitForNextUpdate({ timeout: false});
+
+// Pruebas en renderizaciones
+expect(wrapper.find('blockquote p:first-child').text().trim()).toBe('Hello world!');
+
+// Para comprobar si tiene los respectivos argumentos
+expect(wrapper.find('TodoListItem').at(0).prop('handleToggle')).toEqual( expect.any(Function) );
+
+// Llamado a funciones con e.preventDefault()
+const formSubmit = wrapper.find('form').prop('onSubmit');
+formSubmit( { preventDefault(){} } );
+
+// Verificar el llamado con cierto argumentos
+expect(handleAddTodo).toHaveBeenCalledWith({
+    id: expect.any(Number),
+    description: value,
+    done: false,
+});
+
+// Para funciones comprobar si se han llamado o verificar el resultado de sus efectos
+
+// Shallow renderiza el componente aislado
+// Mount renderiza el componente con todos sus hijos
+const wrapper = mount(<TodoApp />);
+
+// Ejecutar funciones que actualizan estados del componente
+import { act } from '@testing-library/react';
+
+act(() => {
+    // Funciones...
+});
+
+// Mock de LocalStorage
+Storage.prototype.setItem = jest.fn(() => {});
+expect(localStorage.setItem).toHaveBeenCalledTimes(2);
+
+// Pruebas con contextos
+const wrapper = shallow(
+    <UserContext.Provider value={ user }>
+        <HomeScreen />
+    </UserContext.Provider>
+);
+// shallow sólo renderiza el componente padre, usar mount
 ```
 
 ### Good practices

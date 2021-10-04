@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoListItem /> tests should show the right component 1`] = `
+<li
+  className="columns has-not-bullet m-0"
+>
+  <div
+    className="column is-three-fifths has-cursor-pointer has-text-grey-dark"
+    onClick={[Function]}
+  >
+    1
+    . 
+    Learn React
+  </div>
+  <div
+    className="column"
+  >
+    <button
+      className="button is-black mr-2"
+    >
+      Edit
+    </button>
+    <button
+      className="button is-black is-outlined"
+      onClick={[Function]}
+    >
+      Delete
+    </button>
+  </div>
+</li>
+`;

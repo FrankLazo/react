@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoApp /> tests should show the right component 1`] = `
+<div
+  className="min-height-full content has-background-dark p-6 has-text-light"
+>
+  <h1
+    className="has-text-light"
+  >
+    Todo App
+  </h1>
+  <hr
+    className="full-rule has-background-grey-dark"
+  />
+  <h2
+    className="has-text-primary"
+  >
+    Add task:
+  </h2>
+  <TodoAdd
+    handleAddTodo={[Function]}
+  />
+  <hr
+    className="full-rule has-background-grey-dark"
+  />
+  <h2
+    className="has-text-primary"
+  >
+    Tasks: 
+    <span
+      className="has-text-primary-light"
+    >
+      0
+    </span>
+  </h2>
+  <TodoList
+    handleDelete={[Function]}
+    handleToggle={[Function]}
+    todos={Array []}
+  />
+</div>
+`;

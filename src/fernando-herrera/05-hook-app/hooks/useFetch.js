@@ -25,6 +25,13 @@ const useFetch = ( url ) =>
 						data,
 					});
 				}
+			})
+			.catch(() => {
+				setState({
+					data: null,
+					loading: false,
+					error: 'Data was not downloaded',
+				});
 			});
 	}, [url]);
 

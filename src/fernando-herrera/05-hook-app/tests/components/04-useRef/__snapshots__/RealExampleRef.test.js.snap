@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RealExampleRef /> tests should show the right component 1`] = `
+<div
+  className="min-height-full content has-background-dark is-flex is-flex-direction-column is-align-items-start p-6 has-text-light"
+>
+  <h2
+    className="has-text-primary"
+  >
+    Real Example Ref
+  </h2>
+  <hr
+    className="full-rule has-background-primary"
+  />
+  <button
+    className="button is-primary"
+    onClick={[Function]}
+  >
+    Show / Hide
+  </button>
+</div>
+`;

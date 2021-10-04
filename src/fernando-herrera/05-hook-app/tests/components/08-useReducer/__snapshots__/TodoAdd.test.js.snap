@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TodoAdd /> tests should show the right component 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <div
+    className="field"
+  >
+    <div
+      className="control"
+    >
+      <input
+        autoComplete="off"
+        className="input"
+        name="description"
+        onChange={[Function]}
+        placeholder="Learn..."
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="field"
+  >
+    <div
+      className="control"
+    >
+      <button
+        className="button is-primary"
+        type="submit"
+      >
+        Add task
+      </button>
+    </div>
+  </div>
+</form>
+`;

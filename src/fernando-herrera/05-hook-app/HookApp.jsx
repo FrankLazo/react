@@ -13,7 +13,7 @@
 
 // import './components/08-useReducer/intro-reducer';
 
-import MainApp from './components/09-useContext/MainApp';
+// import MainApp from './components/09-useContext/MainApp';
 // import TodoApp from './components/08-useReducer/TodoApp';
 
 const HookApp = () =>
@@ -32,11 +32,11 @@ const HookApp = () =>
 		// <CallbackHook />
 		// <Parent />
 		// <TodoApp />
-		<MainApp />
+		// <MainApp />
 
-		// <div>
-		// 	HookApp
-		// </div>
+		<div>
+			HookApp
+		</div>
 	);
 };
 

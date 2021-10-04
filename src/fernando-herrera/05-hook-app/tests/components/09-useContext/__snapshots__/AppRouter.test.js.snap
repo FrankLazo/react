@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppRouter /> tests should show the right component 1`] = `
+<div>
+  <nav
+    className="navbar"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item has-text-weight-bold"
+        href="/"
+        onClick={[Function]}
+      >
+        useContext
+      </a>
+    </div>
+    <div
+      className="navbar-menu is-active"
+    >
+      <ul
+        className="navbar-start"
+      >
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current="page"
+            className="has-text-primary"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Home
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current={null}
+            href="/About"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current={null}
+            href="/Login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div
+    className="min-height-full content has-background-dark p-6 has-text-light"
+  >
+    <h1
+      className="has-text-light"
+    >
+      Home
+    </h1>
+    <hr
+      className="full-rule has-background-grey-dark"
+    />
+    <pre>
+      {
+  "name": "Frank",
+  "mail": "example@mail.com"
+}
+    </pre>
+  </div>
+</div>
+`;
