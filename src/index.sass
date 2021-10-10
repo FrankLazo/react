@@ -1,4 +1,5 @@
 @charset "utf-8"
+@import '~bulma/sass/utilities/_all'
 
 .is-bulletless
 	list-style-type: none
@@ -14,6 +15,16 @@
 
 .has-cursor-pointer
 	cursor: pointer
+
+.full-width
+	width: 100%
+
+// Custom Bulma
+
+// Heroes App
+$tablet: 481px
+$desktop: 769px
+$navbar-breakpoint: $desktop
 
 @import "./luis-cabrera/TodoApp/TodoApp"
 @import "../node_modules/bulma/bulma.sass"

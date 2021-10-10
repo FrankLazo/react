@@ -13,7 +13,8 @@
 // import UseStateApp from './luis-cabrera/UseStateApp';
 
 // import GifExpertApp from './fernando-herrera/04-gif-expert-app/GifExpertApp';
-import HookApp from './fernando-herrera/05-hook-app/HookApp';
+import HeroesApp from './fernando-herrera/06-heroes-app/HeroesApp';
+// import HookApp from './fernando-herrera/05-hook-app/HookApp';
 
 function App()
 {
@@ -34,7 +35,8 @@ function App()
 			{/* <RouterApp /> */}
 
 			{/* <GifExpertApp /> */}
-			<HookApp />
+			{/* <HookApp /> */}
+			<HeroesApp />
 		</div>
 	);
 }

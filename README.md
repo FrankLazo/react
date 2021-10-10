@@ -566,6 +566,27 @@ history.push({
 <Route exact path="/">
     <HomePage />
 </Route>
+
+// Provisto por <Route />
+// En los componentes hijos provee de la prop: history
+history.push('/');      // ir a la página indicada
+history.replace('/');   // reemplaza la página actual por la indicada
+// Si no, usar el hook useHistory
+```
+
+```js
+// Enviar el componente por callback
+<Route
+    { ...rest }
+    component={(props) => (
+        (isAuthenticated)
+        ? (<Component { ...props } />)
+        : <Redirect to="/login" />
+    )}
+/>
+
+// Para almacenar la última página
+rest.location.pathname
 ```
 
 ### Estilos en componentes
@@ -577,6 +598,20 @@ const textStyle = {
     color: 'black',
     background: 'white',
 }
+```
+
+- <https://www.npmjs.com/package/query-string>
+
+```bash
+# Para trabajar con los query strings de las url
+$ npm install query-string
+```
+
+```js
+import queryString from 'query-string';
+
+const { search } = useLocation();
+const { q = '' } = queryString.parse(search);   // q = '' por si devuelve undefined
 ```
 
 [Index]
