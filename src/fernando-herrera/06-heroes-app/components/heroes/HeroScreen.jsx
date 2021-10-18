@@ -7,7 +7,7 @@ const HeroeScreen = ({ history }) =>
 	const { heroId } = useParams();
 	const hero = getHeroById(heroId);
 
-	// Optimización para no volvel a cargar la información
+	// Optimización para no volver a cargar la información
 	// En caso la app tuviera problemas de rendimiento
 	// const hero = useMemo(() => getHeroById(heroId), [ heroId ]);
 

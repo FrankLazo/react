@@ -1,0 +1,297 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchScreen /> tests should show component with default values 1`] = `
+<div
+  className="content m-4"
+>
+  <h1
+    className="has-text-primary"
+  >
+    Search
+  </h1>
+  <hr
+    className="has-background-grey-lighter"
+  />
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-third"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Search form
+      </h2>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <input
+              className="input"
+              name="searchText"
+              onChange={[Function]}
+              placeholder="Find your hero"
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <button
+              className="button is-primary is-outlined is-flex full-width"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      className="column"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Results
+      </h2>
+      <div
+        className="notification is-warning is-light"
+      >
+        Search a hero...
+      </div>
+      <div
+        className="columns is-multiline"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SearchScreen /> tests should show component with queryString value 1`] = `
+<div
+  className="content m-4"
+>
+  <h1
+    className="has-text-primary"
+  >
+    Search
+  </h1>
+  <hr
+    className="has-background-grey-lighter"
+  />
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-third"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Search form
+      </h2>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <input
+              className="input"
+              name="searchText"
+              onChange={[Function]}
+              placeholder="Find your hero"
+              type="text"
+              value="batman"
+            />
+          </div>
+        </div>
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <button
+              className="button is-primary is-outlined is-flex full-width"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      className="column"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Results
+      </h2>
+      <div
+        className="columns is-multiline"
+      >
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Batman"
+                src="./assets/heroes/dc-batman.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Batman
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Bruce Wayne
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Detective Comics #27
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/dc-batman"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SearchScreen /> tests should show error if hero is not found 1`] = `
+<div
+  className="content m-4"
+>
+  <h1
+    className="has-text-primary"
+  >
+    Search
+  </h1>
+  <hr
+    className="has-background-grey-lighter"
+  />
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-third"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Search form
+      </h2>
+      <form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <input
+              className="input"
+              name="searchText"
+              onChange={[Function]}
+              placeholder="Find your hero"
+              type="text"
+              value="batman123"
+            />
+          </div>
+        </div>
+        <div
+          className="field"
+        >
+          <div
+            className="control"
+          >
+            <button
+              className="button is-primary is-outlined is-flex full-width"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      className="column"
+    >
+      <h2
+        className="is-size-4"
+      >
+        Results
+      </h2>
+      <div
+        className="notification is-danger is-light"
+      >
+        There is no a hero with "
+        batman123
+        "
+      </div>
+      <div
+        className="columns is-multiline"
+      />
+    </div>
+  </div>
+</div>
+`;

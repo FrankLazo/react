@@ -1,0 +1,705 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardRoutes /> tests should show the right component 1`] = `
+Array [
+  <nav
+    className="navbar"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <a
+        className="navbar-item has-text-weight-bold"
+        href="/"
+        onClick={[Function]}
+      >
+        Asociaciones
+      </a>
+      <button
+        className="navbar-burger false"
+        onClick={[Function]}
+      >
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+        <span
+          aria-hidden="true"
+        />
+      </button>
+    </div>
+    <div
+      className="navbar-menu false"
+    >
+      <ul
+        className="navbar-start"
+      >
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current="page"
+            className="has-text-primary"
+            href="/marvel"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Marvel
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current={null}
+            href="/dc"
+            onClick={[Function]}
+          >
+            DC
+          </a>
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <a
+            aria-current={null}
+            href="/search"
+            onClick={[Function]}
+          >
+            Search
+          </a>
+        </li>
+      </ul>
+      <ul
+        className="navbar-end"
+      >
+        <li
+          className="navbar-item"
+        >
+          <span
+            className="has-text-weight-medium"
+          >
+            Hello 
+            Frank
+            !
+          </span>
+        </li>
+        <li
+          className="navbar-item"
+        >
+          <div
+            className="buttons"
+          >
+            <button
+              className="button is-primary"
+              onClick={[Function]}
+            >
+              Logout
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>,
+  <div>
+    <div
+      className="content p-4"
+    >
+      <h1
+        className="has-text-primary"
+      >
+        Marvel Screen
+      </h1>
+      <hr
+        className="has-background-grey-lighter"
+      />
+      <div
+        className="columns is-multiline animate__animated animate__fadeIn"
+      >
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Spider Man"
+                src="./assets/heroes/marvel-spider.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Spider Man
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Peter Parker
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Amazing Fantasy #15
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-spider"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Captain America"
+                src="./assets/heroes/marvel-captain.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Captain America
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Steve Rogers
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Captain America Comics #1
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-captain"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Iron Man"
+                src="./assets/heroes/marvel-iron.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Iron Man
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Tony Stark
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Tales of Suspense #39
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-iron"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Thor"
+                src="./assets/heroes/marvel-thor.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Thor
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Thor Odinson
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Journey into Myster #83
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-thor"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Hulk"
+                src="./assets/heroes/marvel-hulk.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Hulk
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Bruce Banner
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  The Incredible Hulk #1
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-hulk"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Wolverine"
+                src="./assets/heroes/marvel-wolverine.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Wolverine
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    James Howlett
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  The Incredible Hulk #180
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-wolverine"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Daredevil"
+                src="./assets/heroes/marvel-daredevil.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Daredevil
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Matthew Michael Murdock
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Daredevil #1
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-daredevil"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Hawkeye"
+                src="./assets/heroes/marvel-hawkeye.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Hawkeye
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Clinton Francis Barton
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  Tales of Suspense #57
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-hawkeye"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Cyclops"
+                src="./assets/heroes/marvel-cyclops.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Cyclops
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Scott Summers
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  X-Men #1
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-cyclops"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+        <div
+          className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-image"
+            >
+              <img
+                alt="Silver Surfer"
+                src="./assets/heroes/marvel-silver.jpg"
+              />
+            </div>
+            <div
+              className="card-content"
+            >
+              <div
+                className="media"
+              >
+                <div
+                  className="media-content"
+                >
+                  <p
+                    className="title is-4"
+                  >
+                    Silver Surfer
+                  </p>
+                  <p
+                    className="subtitle is-6"
+                  >
+                    Norrin Radd
+                  </p>
+                </div>
+              </div>
+              <div
+                className="content"
+              >
+                <p
+                  className="has-text-grey-light"
+                >
+                  The Fantastic Four #48
+                </p>
+              </div>
+            </div>
+            <footer
+              className="card-footer"
+            >
+              <a
+                className="card-footer-item"
+                href="/hero/marvel-silver"
+                onClick={[Function]}
+              >
+                Ver más...
+              </a>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

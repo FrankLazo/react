@@ -183,6 +183,7 @@ button1.html();
 
 // simular eventos
 wrapper.find('button').at(0).simulate('click');
+wrapper.find('button').prop('onClick')();
 ```
 
 - Los tests se ejecutan de manera secuencial.
@@ -326,6 +327,9 @@ act(() => {
 Storage.prototype.setItem = jest.fn(() => {});
 expect(localStorage.setItem).toHaveBeenCalledTimes(2);
 
+// También se puede usar localStorage directamente, aunque hay que tener cuidado de donde llamarlo
+localStorage.setItem('lastPath', '/dc');
+
 // Pruebas con contextos
 const wrapper = shallow(
     <UserContext.Provider value={ user }>
@@ -333,6 +337,59 @@ const wrapper = shallow(
     </UserContext.Provider>
 );
 // shallow sólo renderiza el componente padre, usar mount
+```
+
+### Rutas
+
+- No se puede probar `<Route>` fuera de un `<Router>`
+
+```jsx
+// Usar con mount
+// Para solucionar:
+<MemoryRouter>
+    <PrivateRoute />
+<MemoryRouter/>
+```
+
+```jsx
+<Redirect /> // devuelve un string vacío
+```
+
+### Simular useHistory
+
+```jsx
+// Si sale error 'is not a function' añadirla al mock
+const historyMock = {
+    location: {},
+    push: jest.fn(),
+    listen: jest.fn(),
+    replace: jest.fn(),
+    createHref: jest.fn(),
+};
+
+const wrapper = mount(
+    <AuthContext.Provider value={ contextValue }>
+        <MemoryRouter>
+            <Router history={ historyMock }>
+                <Navbar />
+            </Router>
+        </MemoryRouter>
+    </AuthContext.Provider>
+);
+
+// Recomendable limpiar los mocks
+afterEach(() => {
+    jest.clearAllMocks();
+});
+
+// Enviar parámetros y history
+const wrapper = mount(
+    <MemoryRouter initialEntries={['/hero/marvel-spider']}>
+        <Route
+            path="/hero/:heroId"
+            component={ () => <HeroeScreen history={ historyMock } /> } />
+    </MemoryRouter>
+);
 ```
 
 ### Good practices

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> tests should show the right component 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="navbar-brand"
+  >
+    <a
+      className="navbar-item has-text-weight-bold"
+      onClick={[Function]}
+    >
+      Asociaciones
+    </a>
+    <button
+      className="navbar-burger false"
+      onClick={[Function]}
+    >
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+      <span
+        aria-hidden="true"
+      />
+    </button>
+  </div>
+  <div
+    className="navbar-menu false"
+  >
+    <ul
+      className="navbar-start"
+    >
+      <li
+        className="navbar-item"
+      >
+        <a
+          aria-current={null}
+          onClick={[Function]}
+        >
+          Marvel
+        </a>
+      </li>
+      <li
+        className="navbar-item"
+      >
+        <a
+          aria-current={null}
+          onClick={[Function]}
+        >
+          DC
+        </a>
+      </li>
+      <li
+        className="navbar-item"
+      >
+        <a
+          aria-current={null}
+          onClick={[Function]}
+        >
+          Search
+        </a>
+      </li>
+    </ul>
+    <ul
+      className="navbar-end"
+    >
+      <li
+        className="navbar-item"
+      >
+        <span
+          className="has-text-weight-medium"
+        >
+          Hello 
+          Frank
+          !
+        </span>
+      </li>
+      <li
+        className="navbar-item"
+      >
+        <div
+          className="buttons"
+        >
+          <button
+            className="button is-primary"
+            onClick={[Function]}
+          >
+            Logout
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

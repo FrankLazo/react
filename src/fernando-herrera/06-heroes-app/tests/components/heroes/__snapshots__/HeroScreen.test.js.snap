@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeroScreen /> tests should show the Redirect component if there is not arguments in URL 1`] = `""`;
