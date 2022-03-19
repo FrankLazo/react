@@ -2,6 +2,10 @@ import { Redirect, useParams } from 'react-router';
 import getHeroById from '../../selectors/getHeroById';
 import 'animate.css';
 
+// import batman from '../../assets/heroes/dc-batman.jpg';
+// const heroImages = require.context('../../assets/heroes', true);
+// import { heroImages } from '../../helpers/heroImages';
+
 const HeroeScreen = ({ history }) =>
 {
 	const { heroId } = useParams();
@@ -45,6 +49,8 @@ const HeroeScreen = ({ history }) =>
 				<div className="column is-one-third">
 					<img
 						src={ `../assets/heroes/${ heroId }.jpg` }
+						// src={ batman }
+						// src={ heroImages(`./${ heroId }.jpg`).default }
 						alt={ superhero }
 						className="animate__animated animate__fadeInLeft"
 						/>

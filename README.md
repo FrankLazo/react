@@ -11,6 +11,7 @@ Este repositorio contiene diferentes prácticas relacionadas con [React]: códig
 1. [Definiciones](#section-4)
 1. [Elementos](#section-5)
 1. [Buenas prácticas, convenciones y complementos](#section-6)
+1. [Jest](jest.md)
 
 ---
 <a id="section-1"></a>
@@ -613,6 +614,25 @@ import queryString from 'query-string';
 const { search } = useLocation();
 const { q = '' } = queryString.parse(search);   // q = '' por si devuelve undefined
 ```
+
+Trabajar con imágenes
+
+- <https://webpack.js.org/guides/dependency-management/#requirecontext>
+
+```js
+// Para contenido estático
+import batman from '../../assets/heroes/dc-batman.jpg';
+
+// Para contenido dinámico
+// true para que busque en subcarpetas
+const heroImages = require.context('../../assets/heroes', true);
+
+// .default para imágenes
+<img src={ heroImages(`./${ heroId }.jpg`).default } />
+```
+
+Jest no soporta cargas dinámicas con require.context, una posible solución:
+<https://stackoverflow.com/a/61137440>
 
 [Index]
 
