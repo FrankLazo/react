@@ -8,6 +8,7 @@ Este repositorio contiene diferentes prácticas relacionadas con [React]: códig
 1. [Prácticas](#section-1)
 1. [Instalaciones](docs/install.md)
 1. [React JS](docs/react.md)
+1. [Redux](docs/redux.md)
 1. [Jest](docs/jest.md)
 1. [Otros](docs/extra.md)
 
