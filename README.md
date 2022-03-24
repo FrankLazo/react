@@ -101,6 +101,9 @@ Instalación de [React Router]:
 ```bash
 npm install react-router-dom    # or
 yarn add react-router-dom
+
+# Version 5
+npm install react-router-dom@5.3.0
 ```
 
 Instalación de frameworks o utilidades CSS:
@@ -117,6 +120,12 @@ npm install @material-ui/icons  # Para el uso de íconos
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+```
+
+Instalación de Node Sass
+
+```bash
+npm install node-sass
 ```
 
 Verificación de instalación de [Material UI]:
@@ -549,7 +558,7 @@ history.push({
 ### React Router
 
 - `BrowserRouter` busca todas las coincidencias y las renderiza.
-- `Switch` renderiza sólo la primera coincidencia.
+- `Switch` renderiza sólo la primera coincidencia. Dentro de un `div`.
 - `Route` especifica la ruta y componentes a renderizar.
 - Colocar las rutas de la más específica a la más general ó usar `exact`.
 - `Link` en vez de `<a>` para que no recargue la aplicación.
@@ -786,7 +795,13 @@ const StyledButton = styled(({warning, ...rest}) => (
 </StylesProvider>
 ```
 
+```css
+/* Class name:
+        folderName__category */
+```
+
 - <https://breakingbadapi.com/>
+- <https://cdnjs.com/libraries/font-awesome>
 
 TODO: React con clases
 

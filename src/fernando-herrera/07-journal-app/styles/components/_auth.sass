@@ -1,0 +1,53 @@
+.auth__main
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100vw
+	height: 100vh
+	background-color: $primary
+	margin: 0
+
+.auth__box-container
+	width: 250px
+	background-color: white
+	padding: 20px
+	border-radius: 2px
+	box-shadow: 0px 3px $dark-grey
+
+
+.auth__title
+	color: darken( $primary, 20 )
+	margin-bottom: 20px
+
+.auth__input
+	color: $dark-grey
+	border: 0
+	border-bottom: 1px solid $light-grey
+	font-size: 16px
+	margin-bottom: 10px
+	height: 20px
+	width: 100%
+
+	transition: border-bottom 300ms ease
+
+	&:focus
+		border-bottom: 1px solid $primary
+		outline: none
+
+.auth__social-networks
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	width: 100%
+	padding-top: 20px
+	padding-bottom: 20px
+
+.auth__alert-error
+	display: flex
+	justify-content: center
+	padding: 5px
+	margin-bottom: 10px
+	background-color: red
+	border-radius: 5px
+	color: white
